@@ -30,7 +30,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_weight="1"
         android:onClick="onClick"
-        android:textSize="13dp" />
+        android:textSize="12dp" />
 
         <Button
             android:layout_width="wrap_content"
@@ -39,7 +39,7 @@
             android:id="@+id/button2"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:textSize="13dp" />
+            android:textSize="12dp" />
 
         <Button
             android:layout_width="wrap_content"
@@ -48,7 +48,7 @@
             android:id="@+id/button3"
             android:layout_weight="1"
             android:onClick="onClick"
-            android:textSize="13dp" />
+            android:textSize="12dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -57,7 +57,7 @@
         android:id="@+id/button4"
         android:layout_weight="1"
         android:onClick="onClick"
-        android:textSize="13dp" />
+        android:textSize="12dp" />
 
    </LinearLayout>
 
@@ -65,7 +65,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="파일 목록 가져오기"
-        android:id="@+id/button"
+        android:id="@+id/button5"
         android:onClick="onClick"/>
 
     <EditText
