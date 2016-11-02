@@ -12,6 +12,10 @@ import android.view.View;
 import android.widget.Toast;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.StreamCorruptedException;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        String path = Environment.getExternalStorageDirectory().getAbsolutePath();
+        String path = Environment.getExternalStorageDirectory().getAbsolutePath(); //SD Card위치 가져오기
         String folder = path + "/myLoveDir";
         String filename = folder+"/myfile.txt";
 
@@ -51,6 +55,21 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.button3 : //파일생성
+                try {
+                    FileOutputStream fos = new FileOutputStream(filename);
+                    String str  = "Hello";
+                    fos.write(str.getBytes());
+                    fos.close();
+
+                    Toast.makeText(getApplicationContext(),"파일 생성 완료",Toast.LENGTH_SHORT).show();
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    Toast.makeText(getApplicationContext(),"파일 생성 실패",Toast.LENGTH_SHORT).show();
+                }
+
 
                 break;
 
