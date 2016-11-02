@@ -16,7 +16,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="SD Card File"
         android:id="@+id/textView"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center"
+        android:textSize="30dp" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -27,26 +28,36 @@
         android:text="폴더 생성"
         android:id="@+id/button1"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:onClick="onClick"
+        android:textSize="13dp" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="폴더 삭제"
             android:id="@+id/button2"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:textSize="13dp" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="파일 생성"
             android:id="@+id/button3"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:textSize="13dp" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="파일 읽기"
         android:id="@+id/button4"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        android:onClick="onClick"
+        android:textSize="13dp" />
 
    </LinearLayout>
 
@@ -54,12 +65,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="파일 목록 가져오기"
-        android:id="@+id/button" />
+        android:id="@+id/button"
+        android:onClick="onClick"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/editText"
-        android:background="#a2000000"
+        android:background="#d7000000"
         android:textColor="#ffffff" />
+
 </LinearLayout>
